@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout/Layout.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import Calender from "./pages/Calender/Calender.jsx";
+import Board from "./pages/Board/Board.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,12 +14,16 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "/",
+        path: "dashboard",
         element: <Dashboard />,
       },
       {
-        path: "/calender",
+        path: "calender",
         element: <Calender />,
+      },
+      {
+        path: "board",
+        element: <Board />,
       },
     ],
   },
