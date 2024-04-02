@@ -77,3 +77,14 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
+.content {
+  margin: auto;
+  display: flex;
+  height: 100%;
+  margin-top: 4rem;
+}
+.content > div {
+  width: 100%;
+  min-width: 75vh;
+}

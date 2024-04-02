@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout/Layout.jsx";
+import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
+    path: "/",
+
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <Dashboard />,
       },
     ],
   },

@@ -29,7 +29,9 @@ const Layout = () => {
               </div>
             </div>
           </div>
-          <Outlet />
+          <div className={css.content}>
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>
