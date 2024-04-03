@@ -9,7 +9,7 @@ const SideBar = () => {
     <div className={css.container}>
       <img src="./vite.svg" alt="logo" className={css.logo} />
       <div className={css.menu}>
-        <NavLink to={"dashboard"} className={css.item} title="Dashboard">
+        <NavLink to={"/"} className={css.item} title="Dashboard">
           <MdSpaceDashboard size={30} />
         </NavLink>
         <NavLink to={"board"} className={css.item} title="Trello">

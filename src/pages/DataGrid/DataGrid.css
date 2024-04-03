@@ -1,0 +1,13 @@
+.grid-container {
+  padding: 3rem 5rem;
+}
+
+.grid-container > :nth-child(1) {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.MuiTableRow-root,
+.MuiTableCell-root {
+  border: none !important;
+}
