@@ -7,7 +7,6 @@ import Board, {
   moveColumn,
   moveCard,
   addCard,
-  addColumn,
   removeCard,
 } from "@asseinfo/react-kanban";
 import "@asseinfo/react-kanban/dist/styles.css";
@@ -90,11 +89,25 @@ const BoardPage = () => {
           </div>
         )}
         renderColumnHeader={(props) => {
+          const handleCard = (title, detail) => {
+            const card = {
+              id: new Date().getTime(),
+              title,
+              description: detail,
+            };
+            const updatedBoard = addCard(board, props, card);
+            setBoard(updatedBoard);
+            setModelOpen(false);
+          };
           return (
             <div className="column-header">
               <span>{props.title}</span>
               <span onClick={() => setModelOpen(true)}>+</span>
-              <Model visible={modelOpen} onClose={onClose} />
+              <Model
+                visible={modelOpen}
+                onClose={onClose}
+                handleCard={handleCard}
+              />
             </div>
           );
         }}
